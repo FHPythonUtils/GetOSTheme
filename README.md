@@ -1,12 +1,12 @@
-[![Github top language](https://img.shields.io/github/languages/top/FredHappyface/Python.GetOSTheme.svg?style=flat-square)](../../)
-[![Codacy grade](https://img.shields.io/codacy/grade/[codacy-proj-id].svg?style=flat-square)](https://www.codacy.com/manual/FredHappyface/Python.GetOSTheme)
-[![Codacy coverage](https://img.shields.io/codacy/coverage/[codacy-proj-id].svg?style=flat-square)](https://www.codacy.com/manual/FredHappyface/Python.GetOSTheme)
-[![Repository size](https://img.shields.io/github/repo-size/FredHappyface/Python.GetOSTheme.svg?style=flat-square)](../../)
-[![Issues](https://img.shields.io/github/issues/FredHappyface/Python.GetOSTheme.svg?style=flat-square)](../../issues)
-[![License](https://img.shields.io/github/license/FredHappyface/Python.GetOSTheme.svg?style=flat-square)](/LICENSE.md)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/FredHappyface/Python.GetOSTheme.svg?style=flat-square)](../../commits/master)
-[![Last commit](https://img.shields.io/github/last-commit/FredHappyface/Python.GetOSTheme.svg?style=flat-square)](../../commits/master)
-[![PyPI](https://img.shields.io/pypi/dm/getostheme.svg?style=flat-square)](https://pypi.org/project/getostheme/2020/)
+[![Github top language](https://img.shields.io/github/languages/top/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../)
+[![Codacy grade](https://img.shields.io/codacy/grade/9f0a36e773394f15844ab296597e9732.svg?style=for-the-badge)](https://www.codacy.com/manual/FredHappyface/Python.GetOSTheme)
+[![Codacy coverage](https://img.shields.io/codacy/coverage/9f0a36e773394f15844ab296597e9732.svg?style=for-the-badge)](https://www.codacy.com/manual/FredHappyface/Python.GetOSTheme)
+[![Repository size](https://img.shields.io/github/repo-size/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../)
+[![Issues](https://img.shields.io/github/issues/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../issues)
+[![License](https://img.shields.io/github/license/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](/LICENSE.md)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../commits/master)
+[![Last commit](https://img.shields.io/github/last-commit/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../commits/master)
+[![PyPI](https://img.shields.io/pypi/dm/getostheme.svg?style=flat-square)](https://pypi.org/project/getostheme/)
 
 # Python.GetOSTheme
 
