@@ -85,19 +85,17 @@ def isLightMode_Linux():
 	Returns:
 		bool: Linux is in light mode
 	"""
-	if importlib.util.find_spec("gi") is not None: # Gtk3
-		import gi
-		gi.require_version('Gtk', '3.0')
-		from gi.repository import Gtk
-		bgcolor = Gtk.TextView().get_style_context().get_background_color(Gtk.StateType.NORMAL)
-		return bgcolor.red + bgcolor.green + bgcolor.blue > 0.5 * 3
-
-	elif importlib.util.find_spec("PyQt5"): # Qt5
+	if importlib.util.find_spec("PyQt5"): # Qt5
 		from PyQt5.QtWidgets import QApplication
 		from PyQt5.QtGui import QPalette
 		bgcolor = QApplication([]).palette().color(QPalette.Background)
 		return bgcolor.red() + bgcolor.green() + bgcolor.blue() > 255 / 2 * 3
-
+	elif importlib.util.find_spec("gi") is not None: # Gtk3
+		import gi
+		gi.require_version('Gtk', '3.0')
+		from gi.repository import Gtk
+		bgcolor = Gtk.Window().get_style_context().get_background_color(Gtk.StateFlags.NORMAL)
+		return bgcolor.red + bgcolor.green + bgcolor.blue > 0.5 * 3
 	return True
 
 

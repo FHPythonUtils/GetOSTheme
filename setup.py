@@ -5,7 +5,7 @@ with open("README.md", "r") as readme:
 
 setuptools.setup(
 	name="getostheme",
-	version="2020",
+	version="2020.1",
 	author="FredHappyface",
 	description="Use this module to get the OS theme (dark/light)",
 	long_description=long_description,
