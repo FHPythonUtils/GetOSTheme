@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](/LICENSE.md)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../commits/master)
 [![Last commit](https://img.shields.io/github/last-commit/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../commits/master)
-[![PyPI](https://img.shields.io/pypi/dm/getostheme.svg?style=flat-square)](https://pypi.org/project/getostheme/)
+[![PyPI](https://img.shields.io/pypi/dm/getostheme.svg?style=for-the-badge)](https://pypi.org/project/getostheme/)
 
 # Python.GetOSTheme
 
