@@ -120,3 +120,8 @@ def isDarkMode():
 		bool: OS is in dark mode
 	"""
 	return not isLightMode()
+
+
+def cli():
+	'''CLI entry point '''
+	print("OS is in " + ("Light" if isLightMode() else "Dark") + " Mode")

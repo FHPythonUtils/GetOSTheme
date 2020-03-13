@@ -1,6 +1,5 @@
 [![Github top language](https://img.shields.io/github/languages/top/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../)
 [![Codacy grade](https://img.shields.io/codacy/grade/9f0a36e773394f15844ab296597e9732.svg?style=for-the-badge)](https://www.codacy.com/manual/FredHappyface/Python.GetOSTheme)
-[![Codacy coverage](https://img.shields.io/codacy/coverage/9f0a36e773394f15844ab296597e9732.svg?style=for-the-badge)](https://www.codacy.com/manual/FredHappyface/Python.GetOSTheme)
 [![Repository size](https://img.shields.io/github/repo-size/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../)
 [![Issues](https://img.shields.io/github/issues/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../issues)
 [![License](https://img.shields.io/github/license/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](/LICENSE.md)
@@ -11,6 +10,10 @@
 # Python.GetOSTheme
 
 <img src="readme-assets/icons/proj-icon.png" alt="Project Icon" width="100">
+
+## Use
+
+### From import
 
 Use one of the following functions in your program
 
@@ -28,6 +31,21 @@ def isDarkMode():
 		bool: OS is in dark mode
 	"""
 ```
+
+### From CLI
+Call from the command line
+
+```bash
+getostheme
+```
+
+## Install With PIP
+
+```python
+pip install getostheme
+```
+
+Head to https://pypi.org/project/getostheme/ for more info
 
 ## Language information
 ### Built for

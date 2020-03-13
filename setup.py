@@ -1,3 +1,5 @@
+"""Do setup for uploading to pypi
+"""
 import setuptools
 
 with open("README.md", "r") as readme:
@@ -5,16 +7,21 @@ with open("README.md", "r") as readme:
 
 setuptools.setup(
 	name="getostheme",
-	version="2020.1",
+	version="2020.2",
 	author="FredHappyface",
 	description="Use this module to get the OS theme (dark/light)",
 	long_description=long_description,
-    long_description_content_type="text/markdown",
+	long_description_content_type="text/markdown",
 	url="https://github.com/FredHappyface/Python.GetOSTheme",
 	packages=setuptools.find_packages(),
 	classifiers=[
-        "Programming Language :: Python :: 3",
-        "Operating System :: OS Independent",
-    ],
+		"Programming Language :: Python :: 3",
+		"Operating System :: OS Independent",
+	],
+	entry_points={
+        'console_scripts': [
+            'getostheme=getostheme:cli',
+        ],
+    },
 	python_requires='>=3.0',
 )
