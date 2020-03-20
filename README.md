@@ -1,13 +1,13 @@
-[![Github top language](https://img.shields.io/github/languages/top/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../)
-[![Codacy grade](https://img.shields.io/codacy/grade/9f0a36e773394f15844ab296597e9732.svg?style=for-the-badge)](https://www.codacy.com/manual/FredHappyface/Python.GetOSTheme)
-[![Repository size](https://img.shields.io/github/repo-size/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../)
-[![Issues](https://img.shields.io/github/issues/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../issues)
-[![License](https://img.shields.io/github/license/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](/LICENSE.md)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../commits/master)
-[![Last commit](https://img.shields.io/github/last-commit/FredHappyface/Python.GetOSTheme.svg?style=for-the-badge)](../../commits/master)
+[![Github top language](https://img.shields.io/github/languages/top/FHPythonUtils/GetOSTheme.svg?style=for-the-badge)](../../)
+[![Codacy grade](https://img.shields.io/codacy/grade/9f0a36e773394f15844ab296597e9732.svg?style=for-the-badge)](https://www.codacy.com/manual/FHPythonUtils/GetOSTheme)
+[![Repository size](https://img.shields.io/github/repo-size/FHPythonUtils/GetOSTheme.svg?style=for-the-badge)](../../)
+[![Issues](https://img.shields.io/github/issues/FHPythonUtils/GetOSTheme.svg?style=for-the-badge)](../../issues)
+[![License](https://img.shields.io/github/license/FHPythonUtils/GetOSTheme.svg?style=for-the-badge)](/LICENSE.md)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/FHPythonUtils/GetOSTheme.svg?style=for-the-badge)](../../commits/master)
+[![Last commit](https://img.shields.io/github/last-commit/FHPythonUtils/GetOSTheme.svg?style=for-the-badge)](../../commits/master)
 [![PyPI](https://img.shields.io/pypi/dm/getostheme.svg?style=for-the-badge)](https://pypi.org/project/getostheme/)
 
-# Python.GetOSTheme
+# GetOSTheme
 
 <img src="readme-assets/icons/name.png" alt="Project Icon" width="750">
 
@@ -91,7 +91,7 @@ See the [CHANGELOG](/CHANGELOG.md) for more information.
 clone to
 4. Type 'git clone' followed by URL in step 2
 ```bash
-$ git clone https://github.com/FredHappyface/Python.GetOSTheme
+$ git clone https://github.com/FHPythonUtils/GetOSTheme
 ```
 
 More information can be found at
