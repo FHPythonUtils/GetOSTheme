@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "getostheme"
+version = "2020.3"
+description = "Use this module to get the OS theme (dark/light)"
+authors = ["FredHappyface"]
+classifiers = [
+	"Programming Language :: Python :: 3.5",
+	"Programming Language :: Python :: 3.6",
+	"Programming Language :: Python :: 3.7",
+	"Programming Language :: Python :: 3.8",
+	"Operating System :: OS Independent"
+]
+homepage = "https://github.com/FredHappyface/Python.GetOSTheme"
+repository = "https://github.com/FredHappyface/Python.GetOSTheme"
+documentation = "https://github.com/FredHappyface/Python.GetOSTheme/blob/master/README.md"
+readme = "README.md"
+
+[tool.poetry.scripts]
+getostheme = 'getostheme:cli'
+
+[tool.poetry.dependencies]
+python = "^3.5"
+pyqt5 = {version = "^5.14.2", optional = true}
+
+
+[tool.dephell.main]
+from = "pyproject.toml"
+to = "requirements.txt"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
