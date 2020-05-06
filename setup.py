@@ -21,7 +21,7 @@ if os.path.exists(readme_path):
 setup(
     long_description=readme,
     name='getostheme',
-    version='2020.3',
+    version='2020.3.1',
     description='Use this module to get the OS theme (dark/light)',
     python_requires='==3.*,>=3.5.0',
     project_urls={
@@ -34,11 +34,18 @@ setup(
     },
     author='FredHappyface',
     classifiers=[
+        'Environment :: Console', 'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers', 'Intended Audience :: Education',
+        'License :: OSI Approved :: MIT License', 'Natural Language :: English',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'Operating System :: OS Independent'
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Utilities'
     ],
     entry_points={"console_scripts": ["getostheme = getostheme:cli"]},
     packages=['GetOSTheme'],

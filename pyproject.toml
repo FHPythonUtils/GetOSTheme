@@ -1,14 +1,24 @@
 [tool.poetry]
 name = "getostheme"
-version = "2020.3"
+version = "2020.3.1"
 description = "Use this module to get the OS theme (dark/light)"
 authors = ["FredHappyface"]
 classifiers = [
+	"Environment :: Console",
+	"Development Status :: 5 - Production/Stable",
+	"Intended Audience :: Developers",
+	"Intended Audience :: Education",
+	"License :: OSI Approved :: MIT License",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3",
 	"Programming Language :: Python :: 3.5",
 	"Programming Language :: Python :: 3.6",
 	"Programming Language :: Python :: 3.7",
 	"Programming Language :: Python :: 3.8",
-	"Operating System :: OS Independent"
+	"Programming Language :: Python :: Implementation :: CPython",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+	"Topic :: Utilities"
 ]
 homepage = "https://github.com/FredHappyface/Python.GetOSTheme"
 repository = "https://github.com/FredHappyface/Python.GetOSTheme"
