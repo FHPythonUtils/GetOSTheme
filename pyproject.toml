@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "getostheme"
-version = "2020.3.1"
+version = "2020.3.2"
 description = "Use this module to get the OS theme (dark/light)"
 authors = ["FredHappyface"]
 classifiers = [

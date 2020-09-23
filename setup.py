@@ -21,7 +21,7 @@ if os.path.exists(readme_path):
 setup(
     long_description=readme,
     name='getostheme',
-    version='2020.3.1',
+    version='2020.3.2',
     description='Use this module to get the OS theme (dark/light)',
     python_requires='==3.*,>=3.5.0',
     project_urls={

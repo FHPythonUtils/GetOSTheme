@@ -1,10 +1,11 @@
 """Use this module to get the OS theme (dark/light)
 """
+# pylint: disable=import-outside-toplevel
 import platform
 import importlib
 
 
-def isLightMode_Mac():
+def isLightMode_Mac(): # pylint: disable=invalid-name
 	"""For MacOS BSD-3-Clause albertosottile
 	(https://github.com/albertosottile/darkdetect)
 
@@ -12,51 +13,64 @@ def isLightMode_Mac():
 		bool: Windows is in light mode
 	"""
 	import ctypes
+	import ctypes.util
 
-	appkit = ctypes.cdll.LoadLibrary(ctypes.util.find_library('AppKit'))
 	objc = ctypes.cdll.LoadLibrary(ctypes.util.find_library('objc'))
 
 	void_p = ctypes.c_void_p
-	ull = ctypes.c_uint64
 
 	objc.objc_getClass.restype = void_p
 	objc.sel_registerName.restype = void_p
 	objc.objc_msgSend.restype = void_p
 	objc.objc_msgSend.argtypes = [void_p, void_p]
 
-	msg = objc.objc_msgSend
+	# Objective C msg send
+	msgSend = objc.objc_msgSend
 
-	def _utf8(s):
-		if not isinstance(s, bytes):
-			s = s.encode('utf8')
-		return s
+	def _encodeUTF8(string):
+		"""Encode string as utf8 bytes
 
-	def n(name):
-		return objc.sel_registerName(_utf8(name))
+		Args:
+			string (string): string to encode
 
-	def C(classname):
-		return objc.objc_getClass(_utf8(classname))
+		Returns:
+			bytes: bytes
+		"""
+		if not isinstance(string, bytes):
+			string = string.encode('utf8')
+		return string
+
+	def objcName(name):
+		return objc.sel_registerName(_encodeUTF8(name))
+
+	def objcClass(classname):
+		return objc.objc_getClass(_encodeUTF8(classname))
 
 	def theme():
-		NSAutoreleasePool = objc.objc_getClass('NSAutoreleasePool')
-		pool = msg(NSAutoreleasePool, n('alloc'))
-		pool = msg(pool, n('init'))
+		"""Get the MAC OS theme string
 
-		NSUserDefaults = C('NSUserDefaults')
-		stdUserDef = msg(NSUserDefaults, n('standardUserDefaults'))
+		Returns:
+			string: Theme string
+		"""
+		nsAutoreleasePool = objc.objc_getClass('NSAutoreleasePool')
+		pool = msgSend(nsAutoreleasePool, objcName('alloc'))
+		pool = msgSend(pool, objcName('init'))
 
-		NSString = C('NSString')
+		nsUserDefaults = objcClass('NSUserDefaults')
+		stdUserDef = msgSend(nsUserDefaults, objcName('standardUserDefaults'))
 
-		key = msg(NSString, n("stringWithUTF8String:"), _utf8('AppleInterfaceStyle'))
-		appearanceNS = msg(stdUserDef, n('stringForKey:'), void_p(key))
-		appearanceC = msg(appearanceNS, n('UTF8String'))
+		nsString = objcClass('NSString')
+
+		key = msgSend(nsString, objcName("stringWithUTF8String:"), _encodeUTF8('AppleInterfaceStyle'))
+		appearanceNS = msgSend(stdUserDef, objcName('stringForKey:'), void_p(key))
+		appearanceC = msgSend(appearanceNS, objcName('UTF8String'))
 
 		if appearanceC is not None:
 			out = ctypes.string_at(appearanceC)
 		else:
 			out = None
 
-		msg(pool, n('release'))
+		msgSend(pool, objcName('release'))
 
 		if out is not None:
 			return out.decode('utf-8')
@@ -65,7 +79,7 @@ def isLightMode_Mac():
 	return theme() == 'Light'
 
 
-def isLightMode_Windows():
+def isLightMode_Windows(): # pylint: disable=invalid-name
 	"""For Windows OS MIT clxmente
 	(https://github.com/clxmente/Windows-Dark-Mode-Check)
 
@@ -79,7 +93,7 @@ def isLightMode_Windows():
 	return QueryValueEx(openedKey, "AppsUseLightTheme")[0] != 0
 
 
-def isLightMode_Linux():
+def isLightMode_Linux(): # pylint: disable=invalid-name
 	"""For Linux OS MIT FredHappyface
 
 	Returns:
@@ -90,7 +104,7 @@ def isLightMode_Linux():
 		from PyQt5.QtGui import QPalette
 		bgcolor = QApplication([]).palette().color(QPalette.Background)
 		return bgcolor.red() + bgcolor.green() + bgcolor.blue() > 255 / 2 * 3
-	elif importlib.util.find_spec("gi") is not None: # Gtk3
+	if importlib.util.find_spec("gi") is not None: # Gtk3
 		import gi
 		gi.require_version('Gtk', '3.0')
 		from gi.repository import Gtk
