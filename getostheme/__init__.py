@@ -1,11 +1,14 @@
 """Use this module to get the OS theme (dark/light)
 """
 # pylint: disable=import-outside-toplevel
+from __future__ import annotations
+from typing import Union
+
 import platform
-import importlib
+import importlib.util
 
 
-def isLightMode_Mac(): # pylint: disable=invalid-name
+def isLightMode_Mac() -> bool: # pylint: disable=invalid-name
 	"""For MacOS BSD-3-Clause albertosottile
 	(https://github.com/albertosottile/darkdetect)
 
@@ -27,11 +30,11 @@ def isLightMode_Mac(): # pylint: disable=invalid-name
 	# Objective C msg send
 	msgSend = objc.objc_msgSend
 
-	def _encodeUTF8(string):
+	def _encodeUTF8(string: Union[str, bytes]):
 		"""Encode string as utf8 bytes
 
 		Args:
-			string (string): string to encode
+			string (Union[str, bytes]): string to encode
 
 		Returns:
 			bytes: bytes
@@ -40,13 +43,13 @@ def isLightMode_Mac(): # pylint: disable=invalid-name
 			string = string.encode('utf8')
 		return string
 
-	def objcName(name):
+	def objcName(name: Union[str, bytes]):
 		return objc.sel_registerName(_encodeUTF8(name))
 
-	def objcClass(classname):
+	def objcClass(classname: Union[str, bytes]):
 		return objc.objc_getClass(_encodeUTF8(classname))
 
-	def theme():
+	def theme() -> str:
 		"""Get the MAC OS theme string
 
 		Returns:
@@ -79,7 +82,7 @@ def isLightMode_Mac(): # pylint: disable=invalid-name
 	return theme() == 'Light'
 
 
-def isLightMode_Windows(): # pylint: disable=invalid-name
+def isLightMode_Windows() -> bool: # pylint: disable=invalid-name
 	"""For Windows OS MIT clxmente
 	(https://github.com/clxmente/Windows-Dark-Mode-Check)
 
@@ -93,7 +96,7 @@ def isLightMode_Windows(): # pylint: disable=invalid-name
 	return QueryValueEx(openedKey, "AppsUseLightTheme")[0] != 0
 
 
-def isLightMode_Linux(): # pylint: disable=invalid-name
+def isLightMode_Linux() -> bool: # pylint: disable=invalid-name
 	"""For Linux OS MIT FredHappyface
 
 	Returns:
@@ -113,7 +116,7 @@ def isLightMode_Linux(): # pylint: disable=invalid-name
 	return True
 
 
-def isLightMode():
+def isLightMode() -> bool:
 	"""Call isLightMode_OS
 
 	Returns:
@@ -128,7 +131,7 @@ def isLightMode():
 	return True
 
 
-def isDarkMode():
+def isDarkMode() -> bool:
 	"""
 	Returns:
 		bool: OS is in dark mode
