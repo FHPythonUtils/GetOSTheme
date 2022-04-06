@@ -1,10 +1,10 @@
-# getostheme
+# Getostheme
 
-> Auto-generated documentation for [getostheme](../../getostheme/__init__.py) module.
+> Auto-generated documentation for [getostheme](../../../getostheme/__init__.py) module.
 
 Use this module to get the OS theme (dark/light)
 
-- [Getostheme](../README.md#getostheme-index) / [Modules](../README.md#getostheme-modules) / getostheme
+- [Getostheme](../README.md#getostheme-index) / [Modules](../MODULES.md#getostheme-modules) / Getostheme
     - [cli](#cli)
     - [isDarkMode](#isdarkmode)
     - [isLightMode](#islightmode)
@@ -12,11 +12,11 @@ Use this module to get the OS theme (dark/light)
     - [isLightMode_Mac](#islightmode_mac)
     - [isLightMode_Windows](#islightmode_windows)
     - Modules
-        - [\_\_main\_\_](module.md#__main__)
+        - [Module](module.md#module)
 
 ## cli
 
-[[find in source code]](../../getostheme/__init__.py#L153)
+[[find in source code]](../../../getostheme/__init__.py#L153)
 
 ```python
 def cli():
@@ -26,7 +26,7 @@ CLI entry point
 
 ## isDarkMode
 
-[[find in source code]](../../getostheme/__init__.py#L145)
+[[find in source code]](../../../getostheme/__init__.py#L145)
 
 ```python
 def isDarkMode() -> bool:
@@ -38,7 +38,7 @@ def isDarkMode() -> bool:
 
 ## isLightMode
 
-[[find in source code]](../../getostheme/__init__.py#L130)
+[[find in source code]](../../../getostheme/__init__.py#L130)
 
 ```python
 def isLightMode() -> bool:
@@ -52,7 +52,7 @@ Call isLightMode_OS
 
 ## isLightMode_Linux
 
-[[find in source code]](../../getostheme/__init__.py#L107)
+[[find in source code]](../../../getostheme/__init__.py#L107)
 
 ```python
 def isLightMode_Linux() -> bool:
@@ -66,7 +66,7 @@ For Linux OS MIT FredHappyface
 
 ## isLightMode_Mac
 
-[[find in source code]](../../getostheme/__init__.py#L10)
+[[find in source code]](../../../getostheme/__init__.py#L10)
 
 ```python
 def isLightMode_Mac() -> bool:
@@ -85,7 +85,7 @@ For MacOS BSD-3-Clause albertosottile
 
 ## isLightMode_Windows
 
-[[find in source code]](../../getostheme/__init__.py#L92)
+[[find in source code]](../../../getostheme/__init__.py#L92)
 
 ```python
 def isLightMode_Windows() -> bool:
