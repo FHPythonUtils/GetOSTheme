@@ -1,48 +1,54 @@
 # Getostheme
 
+[Getostheme Index](../README.md#getostheme-index) /
+Getostheme
+
 > Auto-generated documentation for [getostheme](../../../getostheme/__init__.py) module.
 
-Use this module to get the OS theme (dark/light)
-
-- [Getostheme](../README.md#getostheme-index) / [Modules](../MODULES.md#getostheme-modules) / Getostheme
-    - [cli](#cli)
-    - [isDarkMode](#isdarkmode)
-    - [isLightMode](#islightmode)
-    - [isLightMode_Linux](#islightmode_linux)
-    - [isLightMode_Mac](#islightmode_mac)
-    - [isLightMode_Windows](#islightmode_windows)
-    - Modules
-        - [Module](module.md#module)
+- [Getostheme](#getostheme)
+  - [cli](#cli)
+  - [isDarkMode](#isdarkmode)
+  - [isLightMode](#islightmode)
+  - [isLightMode_Linux](#islightmode_linux)
+  - [isLightMode_Mac](#islightmode_mac)
+  - [isLightMode_Windows](#islightmode_windows)
+  - [Modules](#modules)
 
 ## cli
 
-[[find in source code]](../../../getostheme/__init__.py#L153)
-
-```python
-def cli():
-```
+[Show source in __init__.py:153](../../../getostheme/__init__.py#L153)
 
 CLI entry point
 
-## isDarkMode
-
-[[find in source code]](../../../getostheme/__init__.py#L145)
+#### Signature
 
 ```python
-def isDarkMode() -> bool:
+def cli():
+    ...
 ```
+
+
+
+## isDarkMode
+
+[Show source in __init__.py:145](../../../getostheme/__init__.py#L145)
 
 #### Returns
 
 - `bool` - OS is in dark mode
 
-## isLightMode
-
-[[find in source code]](../../../getostheme/__init__.py#L130)
+#### Signature
 
 ```python
-def isLightMode() -> bool:
+def isDarkMode() -> bool:
+    ...
 ```
+
+
+
+## isLightMode
+
+[Show source in __init__.py:130](../../../getostheme/__init__.py#L130)
 
 Call isLightMode_OS
 
@@ -50,13 +56,18 @@ Call isLightMode_OS
 
 - `bool` - OS is in light mode
 
-## isLightMode_Linux
-
-[[find in source code]](../../../getostheme/__init__.py#L107)
+#### Signature
 
 ```python
-def isLightMode_Linux() -> bool:
+def isLightMode() -> bool:
+    ...
 ```
+
+
+
+## isLightMode_Linux
+
+[Show source in __init__.py:107](../../../getostheme/__init__.py#L107)
 
 For Linux OS MIT FredHappyface
 
@@ -64,13 +75,18 @@ For Linux OS MIT FredHappyface
 
 - `bool` - Linux is in light mode
 
-## isLightMode_Mac
-
-[[find in source code]](../../../getostheme/__init__.py#L10)
+#### Signature
 
 ```python
-def isLightMode_Mac() -> bool:
+def isLightMode_Linux() -> bool:
+    ...
 ```
+
+
+
+## isLightMode_Mac
+
+[Show source in __init__.py:10](../../../getostheme/__init__.py#L10)
 
 For MacOS BSD-3-Clause albertosottile
 (https://github.com/albertosottile/darkdetect)
@@ -83,13 +99,18 @@ For MacOS BSD-3-Clause albertosottile
 
 - `bool` - Windows is in light mode
 
-## isLightMode_Windows
-
-[[find in source code]](../../../getostheme/__init__.py#L92)
+#### Signature
 
 ```python
-def isLightMode_Windows() -> bool:
+def isLightMode_Mac() -> bool:
+    ...
 ```
+
+
+
+## isLightMode_Windows
+
+[Show source in __init__.py:92](../../../getostheme/__init__.py#L92)
 
 For Windows OS MIT clxmente
 (https://github.com/clxmente/Windows-Dark-Mode-Check)
@@ -97,3 +118,16 @@ For Windows OS MIT clxmente
 #### Returns
 
 - `bool` - Windows is in light mode
+
+#### Signature
+
+```python
+def isLightMode_Windows() -> bool:
+    ...
+```
+
+
+
+## Modules
+
+- [Module](./module.md)
