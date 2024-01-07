@@ -23,8 +23,7 @@ CLI entry point
 #### Signature
 
 ```python
-def cli():
-    ...
+def cli(): ...
 ```
 
 
@@ -40,8 +39,7 @@ def cli():
 #### Signature
 
 ```python
-def isDarkMode() -> bool:
-    ...
+def isDarkMode() -> bool: ...
 ```
 
 
@@ -59,8 +57,7 @@ Call isLightMode_OS
 #### Signature
 
 ```python
-def isLightMode() -> bool:
-    ...
+def isLightMode() -> bool: ...
 ```
 
 
@@ -78,8 +75,7 @@ For Linux OS MIT FredHappyface
 #### Signature
 
 ```python
-def isLightMode_Linux() -> bool:
-    ...
+def isLightMode_Linux() -> bool: ...
 ```
 
 
@@ -102,8 +98,7 @@ For MacOS BSD-3-Clause albertosottile
 #### Signature
 
 ```python
-def isLightMode_Mac() -> bool:
-    ...
+def isLightMode_Mac() -> bool: ...
 ```
 
 
@@ -122,8 +117,7 @@ For Windows OS MIT clxmente
 #### Signature
 
 ```python
-def isLightMode_Windows() -> bool:
-    ...
+def isLightMode_Windows() -> bool: ...
 ```
 
 

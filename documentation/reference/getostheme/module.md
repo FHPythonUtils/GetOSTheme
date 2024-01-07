@@ -5,5 +5,4 @@
 Module
 
 > Auto-generated documentation for [getostheme.__main__](../../../getostheme/__main__.py) module.
-
 - [Module](#module)
