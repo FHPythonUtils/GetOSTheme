@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "getostheme"
-version = "2021"
+version = "2024.0.1"
 license = "mit"
 description = "Use this module to get the OS theme (dark/light)"
 authors = ["FredHappyface"]
@@ -26,6 +26,9 @@ getostheme = 'getostheme:cli'
 [tool.poetry.dependencies]
 python = "^3.8"
 PyQt5 = { version = "<6,>=5.15.10", optional = true }
+
+[tool.poetry.extras]
+qt = ["PyQt5"]
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.4"
