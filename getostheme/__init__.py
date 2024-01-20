@@ -1,4 +1,4 @@
-"""Use this module to get the OS theme (dark/light)
+"""Use this module to get the OS theme (dark/light).
 """
 # pylint: disable=import-outside-toplevel
 from __future__ import annotations
@@ -9,12 +9,14 @@ import platform
 
 def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 	"""For MacOS BSD-3-Clause albertosottile
-	(https://github.com/albertosottile/darkdetect)
+	(https://github.com/albertosottile/darkdetect).
 
-	Raises:
+	Raises
+	------
 		OSError: Cannot load objc
 
-	Returns:
+	Returns
+	-------
 		bool: Windows is in light mode
 	"""
 	import ctypes
@@ -22,7 +24,8 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 
 	lib = ctypes.util.find_library("objc")
 	if not lib:
-		raise OSError("Cannot load objc")
+		msg = "Cannot load objc"
+		raise OSError(msg)
 	objc = ctypes.cdll.LoadLibrary(lib)
 
 	void_p = ctypes.c_void_p
@@ -35,16 +38,18 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 	# Objective C msg send
 	msgSend = objc.objc_msgSend
 
-	def _encodeUTF8(string: str | bytes):
-		"""Encode string as utf8 bytes
+	def _encodeUTF8(string: str | bytes) -> bytes:
+		"""Encode string as utf8 bytes.
 
 		Args:
+		----
 			string (Union[str, bytes]): string to encode
 
 		Returns:
+		-------
 			bytes: bytes
 		"""
-		if not isinstance(string, bytes):
+		if isinstance(string, str):
 			string = string.encode("utf8")
 		return string
 
@@ -55,9 +60,10 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 		return objc.objc_getClass(_encodeUTF8(classname))
 
 	def theme() -> str:
-		"""Get the MAC OS theme string
+		"""Get the MAC OS theme string.
 
-		Returns:
+		Returns
+		-------
 			string: Theme string
 		"""
 		nsAutoreleasePool = objc.objc_getClass("NSAutoreleasePool")
@@ -75,10 +81,7 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 		appearanceNS = msgSend(stdUserDef, objcName("stringForKey:"), void_p(key))
 		appearanceC = msgSend(appearanceNS, objcName("UTF8String"))
 
-		if appearanceC is not None:
-			out = ctypes.string_at(appearanceC)
-		else:
-			out = None
+		out = ctypes.string_at(appearanceC) if appearanceC is not None else None
 
 		msgSend(pool, objcName("release"))
 
@@ -91,9 +94,10 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 
 def isLightMode_Windows() -> bool:  # pylint: disable=invalid-name
 	"""For Windows OS MIT clxmente
-	(https://github.com/clxmente/Windows-Dark-Mode-Check)
+	(https://github.com/clxmente/Windows-Dark-Mode-Check).
 
-	Returns:
+	Returns
+	-------
 		bool: Windows is in light mode
 	"""
 	from winreg import HKEY_CURRENT_USER, ConnectRegistry, OpenKey, QueryValueEx
@@ -105,9 +109,10 @@ def isLightMode_Windows() -> bool:  # pylint: disable=invalid-name
 
 
 def isLightMode_Linux() -> bool:  # pylint: disable=invalid-name
-	"""For Linux OS MIT FredHappyface
+	"""For Linux OS MIT FredHappyface.
 
-	Returns:
+	Returns
+	-------
 		bool: Linux is in light mode
 	"""
 	if importlib.util.find_spec("PyQt5"):  # Qt5
@@ -128,9 +133,10 @@ def isLightMode_Linux() -> bool:  # pylint: disable=invalid-name
 
 
 def isLightMode() -> bool:
-	"""Call isLightMode_OS
+	"""Call isLightMode_OS.
 
-	Returns:
+	Returns
+	-------
 		bool: OS is in light mode
 	"""
 	if platform.system() == "Darwin":
@@ -143,13 +149,15 @@ def isLightMode() -> bool:
 
 
 def isDarkMode() -> bool:
-	"""
-	Returns:
+	"""Is the OS in dark mode?.
+
+	Returns
+	-------
 		bool: OS is in dark mode
 	"""
 	return not isLightMode()
 
 
-def cli():
-	"""CLI entry point"""
+def cli() -> None:
+	"""CLI entry point."""
 	print("OS is in " + ("Light" if isLightMode() else "Dark") + " Mode")
