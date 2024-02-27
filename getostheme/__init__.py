@@ -18,6 +18,7 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 	Returns
 	-------
 		bool: Windows is in light mode
+
 	"""
 	import ctypes
 	import ctypes.util
@@ -48,6 +49,7 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 		Returns:
 		-------
 			bytes: bytes
+
 		"""
 		if isinstance(string, str):
 			string = string.encode("utf8")
@@ -65,6 +67,7 @@ def isLightMode_Mac() -> bool:  # pylint: disable=invalid-name
 		Returns
 		-------
 			string: Theme string
+
 		"""
 		nsAutoreleasePool = objc.objc_getClass("NSAutoreleasePool")
 		pool = msgSend(nsAutoreleasePool, objcName("alloc"))
@@ -99,6 +102,7 @@ def isLightMode_Windows() -> bool:  # pylint: disable=invalid-name
 	Returns
 	-------
 		bool: Windows is in light mode
+
 	"""
 	from winreg import HKEY_CURRENT_USER, ConnectRegistry, OpenKey, QueryValueEx
 
@@ -114,6 +118,7 @@ def isLightMode_Linux() -> bool:  # pylint: disable=invalid-name
 	Returns
 	-------
 		bool: Linux is in light mode
+
 	"""
 	if importlib.util.find_spec("PyQt5"):  # Qt5
 		from PyQt5.QtGui import QPalette
@@ -138,6 +143,7 @@ def isLightMode() -> bool:
 	Returns
 	-------
 		bool: OS is in light mode
+
 	"""
 	if platform.system() == "Darwin":
 		return isLightMode_Mac()
@@ -154,6 +160,7 @@ def isDarkMode() -> bool:
 	Returns
 	-------
 		bool: OS is in dark mode
+
 	"""
 	return not isLightMode()
 
