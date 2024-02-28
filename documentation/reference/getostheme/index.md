@@ -15,7 +15,7 @@
 
 ## cli
 
-[Show source in __init__.py:161](../../../getostheme/__init__.py#L161)
+[Show source in __init__.py:168](../../../getostheme/__init__.py#L168)
 
 CLI entry point.
 
@@ -29,7 +29,7 @@ def cli() -> None: ...
 
 ## isDarkMode
 
-[Show source in __init__.py:151](../../../getostheme/__init__.py#L151)
+[Show source in __init__.py:157](../../../getostheme/__init__.py#L157)
 
 Is the OS in dark mode?.
 
@@ -47,7 +47,7 @@ def isDarkMode() -> bool: ...
 
 ## isLightMode
 
-[Show source in __init__.py:135](../../../getostheme/__init__.py#L135)
+[Show source in __init__.py:140](../../../getostheme/__init__.py#L140)
 
 Call isLightMode_OS.
 
@@ -65,7 +65,7 @@ def isLightMode() -> bool: ...
 
 ## isLightMode_Linux
 
-[Show source in __init__.py:111](../../../getostheme/__init__.py#L111)
+[Show source in __init__.py:115](../../../getostheme/__init__.py#L115)
 
 For Linux OS MIT FredHappyface.
 
@@ -106,7 +106,7 @@ def isLightMode_Mac() -> bool: ...
 
 ## isLightMode_Windows
 
-[Show source in __init__.py:95](../../../getostheme/__init__.py#L95)
+[Show source in __init__.py:98](../../../getostheme/__init__.py#L98)
 
 For Windows OS MIT clxmente
 (https://github.com/clxmente/Windows-Dark-Mode-Check).
