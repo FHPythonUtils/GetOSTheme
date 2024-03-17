@@ -1,5 +1,5 @@
-"""Use this module to get the OS theme (dark/light).
-"""
+"""Use this module to get the OS theme (dark/light)."""
+
 # pylint: disable=import-outside-toplevel
 from __future__ import annotations
 
